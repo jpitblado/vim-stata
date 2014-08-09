@@ -14,37 +14,37 @@ endif
 let b:did_ftplugin = 1
 
 " comment out the current line
-nnoremap ;c 0i* <esc>j
+nnoremap <localleader>c 0i* <esc>j
 
 " make a character line (almost) the width of a typical page
-nnoremap ,cl o<esc>77i*<esc>0
+nnoremap <localleader>cl o<esc>77i*<esc>0
 
 " insert/remove double bang comment start of line
-nnoremap ;r 0i//!!rm <esc>0j
-nnoremap ,rr 07xj
+nnoremap <localleader>r 0i//!!rm <esc>0j
+nnoremap <localleader>rr 07xj
 " insert/remove double bang comment end of line
-nnoremap ;R A //!!rm <esc>0j
-nnoremap ,RR $6hDj
+nnoremap <localleader>R A //!!rm <esc>0j
+nnoremap <localleader>RR $6hDj
 
 " insert line for debug output
 " Mata
-nnoremap ,dm O<esc>aerrprintf("!!rm: xx\n")<esc>
-nnoremap ,dx O<esc>aerrprintf("!!rm: xx\n"); xx<esc>
+nnoremap <localleader>dm O<esc>aerrprintf("!!rm: xx\n")<esc>
+nnoremap <localleader>dx O<esc>aerrprintf("!!rm: xx\n"); xx<esc>
 " Stata
-nnoremap ,ds O<esc>adi as err `"!!rm: xx"'<esc>
-nnoremap ;0 O<esc>adi as err `"!!rm: 0"'<esc>
+nnoremap <localleader>ds O<esc>adi as err `"!!rm: xx"'<esc>
+nnoremap <localleader>0 O<esc>adi as err `"!!rm: 0"'<esc>
 " Stata -- display global macro
-nnoremap ,dG O<esc>adi as err `"!!rm: xx = "' ${xx}<esc>
-nnoremap ,dg O<esc>adi as err `"!!rm: xx is \|${xx}\|"'<esc>
+nnoremap <localleader>dG O<esc>adi as err `"!!rm: xx = "' ${xx}<esc>
+nnoremap <localleader>dg O<esc>adi as err `"!!rm: xx is \|${xx}\|"'<esc>
 " Stata -- display local macro
-nnoremap ,dL O<esc>adi as err `"!!rm: xx = "' `xx'<esc>
-nnoremap ,dl O<esc>adi as err `"!!rm: xx is \|`xx'\|"'<esc>
+nnoremap <localleader>dL O<esc>adi as err `"!!rm: xx = "' `xx'<esc>
+nnoremap <localleader>dl O<esc>adi as err `"!!rm: xx is \|`xx'\|"'<esc>
 " display Mata debug info
-nnoremap ,xd O<esc>aerrprintf("!!rm: xx = %g\n", xx) ;<esc>
-nnoremap ,xl O<esc>aerrprintf("!!rm: xx = %f\n", xx) ;<esc>
-nnoremap ,xs O<esc>aerrprintf("!!rm: xx = %s\n", xx) ;<esc>
+nnoremap <localleader>xd O<esc>aerrprintf("!!rm: xx = %g\n", xx) ;<esc>
+nnoremap <localleader>xl O<esc>aerrprintf("!!rm: xx = %f\n", xx) ;<esc>
+nnoremap <localleader>xs O<esc>aerrprintf("!!rm: xx = %s\n", xx) ;<esc>
 
 " debug early exit
-nnoremap ,ex mpo<esc>aexit 1 //!!rm<cr><esc>'p
+nnoremap <localleader>ex mpo<esc>aexit 1 //!!rm<cr><esc>'p
 
 " END
