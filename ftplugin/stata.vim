@@ -1,6 +1,6 @@
 " ftplugin/stata.vim - maps for Stata source files
 " Maintainer:   Jeff Pitblado <jpitblado@stata.com>
-" Last Change:  10aug2014
+" Last Change:  09aug2014
 
 if exists("b:did_ftplugin")
 	finish
@@ -12,6 +12,11 @@ let b:did_ftplugin = 1
 " insert/remove double bang comment start of line
 nnoremap <buffer> <localleader>c 0i//!!rm <esc>0j
 nnoremap <buffer> <localleader>C 07xj
+
+" update the version comment at the top of the file
+nnoremap <buffer> <localleader>uu gg/\<version\>\\|\<VERSION\>/<cr>6wcw<esc>,ddJ,nn
+nnoremap <buffer> <localleader>vv ,uu?\.?<cr><c-a>,nn
+nnoremap <buffer> <localleader>hh gg/\<version\>\\|\<VERSION\>/<cr>6wcw<cr><esc>k,ddJJx?\.?<cr><c-a>,nn
 
 " Mata debug message
 nnoremap <buffer> <localleader>m0 Oerrprintf("!!rm: 0\n")<esc>
