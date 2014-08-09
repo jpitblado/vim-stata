@@ -10,32 +10,34 @@ let b:did_ftplugin = 1
 " I use '!!rm' in my debug output so it is easy to search for and remove later
 
 " insert/remove double bang comment start of line
-nnoremap <buffer> <localleader>r 0i//!!rm <esc>0j
-nnoremap <buffer> <localleader>rr 07xj
+nnoremap <buffer> <localleader>c 0i//!!rm <esc>0j
+nnoremap <buffer> <localleader>C 07xj
 
-" insert line for debug output
-" Mata
-nnoremap <buffer> <localleader>dm O<esc>aerrprintf("!!rm: xx\n")<esc>
-nnoremap <buffer> <localleader>dx O<esc>aerrprintf("!!rm: xx\n"); xx<esc>
-" Stata
-nnoremap <buffer> <localleader>ds O<esc>adi as err `"!!rm: xx"'<esc>
-nnoremap <buffer> <localleader>0 O<esc>adi as err `"!!rm: 0"'<esc>
-" Stata -- display global macro
-nnoremap <buffer> <localleader>dG O<esc>adi as err `"!!rm: xx = "' ${xx}<esc>
-nnoremap <buffer> <localleader>dg O<esc>adi as err `"!!rm: xx is \|${xx}\|"'<esc>
-" Stata -- display local macro
-nnoremap <buffer> <localleader>dL O<esc>adi as err `"!!rm: xx = "' `xx'<esc>
-nnoremap <buffer> <localleader>dl O<esc>adi as err `"!!rm: xx is \|`xx'\|"'<esc>
-" display Mata debug info
-nnoremap <buffer> <localleader>xd O<esc>aerrprintf("!!rm: xx = %g\n", xx) ;<esc>
-nnoremap <buffer> <localleader>xl O<esc>aerrprintf("!!rm: xx = %f\n", xx) ;<esc>
-nnoremap <buffer> <localleader>xs O<esc>aerrprintf("!!rm: xx = %s\n", xx) ;<esc>
+" Mata debug message
+nnoremap <buffer> <localleader>m0 Oerrprintf("!!rm: 0\n")<esc>
+" Mata show object
+nnoremap <buffer> <localleader>mx Oerrprintf("!!rm: xx\n"); xx<esc>
+" Mata show real scalar value
+nnoremap <buffer> <localleader>mg Oerrprintf("!!rm: xx = %g\n", xx) ;<esc>
+" Mata show integer scalar value
+nnoremap <buffer> <localleader>mf Oerrprintf("!!rm: xx = %f\n", xx) ;<esc>
+" Mata show string scalar value
+nnoremap <buffer> <localleader>ms Oerrprintf("!!rm: xx = %s\n", xx) ;<esc>
+" Mata exit early
+nnoremap <buffer> <localleader>mee mpoexit(9999) //!!rm<cr><esc>'p
+
+" Stata debug message
+nnoremap <buffer> <localleader>s0 Odi as err `"!!rm: 0"'<esc>
+" Stata show global macro
+nnoremap <buffer> <localleader>sG Odi as err `"!!rm: xx = "' ${xx}<esc>
+nnoremap <buffer> <localleader>sg Odi as err `"!!rm: xx is \|${xx}\|"'<esc>
+" Stata show local macro
+nnoremap <buffer> <localleader>sL Odi as err `"!!rm: xx = "' `xx'<esc>
+nnoremap <buffer> <localleader>sl Odi as err `"!!rm: xx is \|`xx'\|"'<esc>
+" Stata exit early
+nnoremap <buffer> <localleader>see mpoexit 9999 //!!rm<cr><esc>'p
 
 " replace 'xx' in the current line with ...
 nnoremap <buffer> <localleader>xx :s/xx/
-
-" debug early exit
-nnoremap <buffer> <localleader>sexit mpo<esc>aexit 99 //!!rm<cr><esc>'p
-nnoremap <buffer> <localleader>mexit mpo<esc>aexit(99) //!!rm<cr><esc>'p
 
 " end: ftplugin/stata.vim
