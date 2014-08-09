@@ -1,18 +1,8 @@
-" stata.vim -- Vim syntax file for Stata do, ado, and class files.
+" syntax/stata.vim -- Vim syntax file for Stata source files
 " Language:	Stata and/or Mata
 " Maintainer:	Jeff Pitblado <jpitblado@stata.com>
 " Last Change:	09aug2014
-" Version:	1.1.5
-
-" Log:
-" 14apr2006	renamed syntax groups st* to stata*
-"		'syntax clear' only under version control
-"		check for 'b:current_syntax', removed 'did_stata_syntax_inits'
-" 17apr2006	fixed start expression for stataFunc
-" 26apr2006	fixed brace confusion in stataErrInParen and stataErrInBracket
-"		fixed paren/bracket confusion in stataFuncGroup
-" 09aug2014	added '///' to stataSlashComment
-"		added stataStarComment and stataSlashComment to stataFuncGroup
+" Comment:	updated for Stata 9
 
 if version < 600
 	syntax clear
