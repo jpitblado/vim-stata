@@ -12,9 +12,6 @@ let b:did_ftplugin = 1
 " insert/remove double bang comment start of line
 nnoremap <buffer> <localleader>r 0i//!!rm <esc>0j
 nnoremap <buffer> <localleader>rr 07xj
-" insert/remove double bang comment end of line
-nnoremap <buffer> <localleader>R A //!!rm <esc>0j
-nnoremap <buffer> <localleader>RR $6hDj
 
 " insert line for debug output
 " Mata
