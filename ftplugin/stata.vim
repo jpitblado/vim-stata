@@ -34,6 +34,9 @@ nnoremap <localleader>xd O<esc>aerrprintf("!!rm: xx = %g\n", xx) ;<esc>
 nnoremap <localleader>xl O<esc>aerrprintf("!!rm: xx = %f\n", xx) ;<esc>
 nnoremap <localleader>xs O<esc>aerrprintf("!!rm: xx = %s\n", xx) ;<esc>
 
+" replace 'xx' in the current line with ...
+nnoremap <localleader>xx :s/xx/
+
 " debug early exit
 nnoremap <localleader>ex mpo<esc>aexit 1 //!!rm<cr><esc>'p
 
