@@ -41,4 +41,4 @@ nnoremap <localleader>xx :s/xx/
 nnoremap <localleader>sexit mpo<esc>aexit 99 //!!rm<cr><esc>'p
 nnoremap <localleader>mexit mpo<esc>aexit(99) //!!rm<cr><esc>'p
 
-" END
+" end: ftplugin/stata.vim

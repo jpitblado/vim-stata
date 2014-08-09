@@ -442,3 +442,4 @@ hi def link stataString		String
 let b:current_syntax = "stata"
 
 " vim: ts=8
+" end: syntax/stata.vim
