@@ -38,6 +38,7 @@ nnoremap <localleader>xs O<esc>aerrprintf("!!rm: xx = %s\n", xx) ;<esc>
 nnoremap <localleader>xx :s/xx/
 
 " debug early exit
-nnoremap <localleader>ex mpo<esc>aexit 1 //!!rm<cr><esc>'p
+nnoremap <localleader>sexit mpo<esc>aexit 99 //!!rm<cr><esc>'p
+nnoremap <localleader>mexit mpo<esc>aexit(99) //!!rm<cr><esc>'p
 
 " END
