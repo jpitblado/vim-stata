@@ -1,10 +1,6 @@
-" Vim filetype plugin file -- mappings for do-files, ado-files, and mata-files
-" Language:     Stata and Mata
+" ftplugin/stata.vim - maps for Stata source files
 " Maintainer:   Jeff Pitblado <jpitblado@stata.com>
-" Last Change:  14nov2011
-" Version:	1.0.4
-
-" Log:
+" Last Change:  09aug2014
 
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin")
@@ -12,12 +8,6 @@ if exists("b:did_ftplugin")
 endif
 " Don't load another plugin for this buffer
 let b:did_ftplugin = 1
-
-" comment out the current line
-nnoremap <localleader>c 0i* <esc>j
-
-" make a character line (almost) the width of a typical page
-nnoremap <localleader>cl o<esc>77i*<esc>0
 
 " insert/remove double bang comment start of line
 nnoremap <localleader>r 0i//!!rm <esc>0j
