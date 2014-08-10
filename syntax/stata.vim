@@ -2,6 +2,7 @@
 " Language:	Stata and/or Mata
 " Maintainer:	Jeff Pitblado <jpitblado@stata.com>
 " Last Change:	09aug2014
+" Version:	1.1.5
 " Comment:	updated for Stata 9
 
 if version < 600
