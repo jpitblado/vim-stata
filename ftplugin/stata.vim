@@ -1,6 +1,6 @@
 " ftplugin/stata.vim - maps for Stata source files
-" Maintainer:   Jeff Pitblado <jpitblado@stata.com>
-" Last Change:  09aug2014
+" Maintainer:   Jeff Pitblado <jpitblado at stata.com>
+" Last Change:  10aug2014
 
 if exists("b:did_ftplugin")
 	finish
