@@ -1,9 +1,9 @@
 " syntax/stata.vim -- Vim syntax file for Stata source files
 " Language:	Stata and/or Mata
-" Maintainer:	Jeff Pitblado <jpitblado@stata.com>
-" Last Change:	09aug2014
+" Maintainer:   Jeff Pitblado <jpitblado at stata.com>
+" Last Change:	10aug2014
 " Version:	1.1.5
-" Comment:	updated for Stata 9
+" Note:		updated for Stata 9
 
 if version < 600
 	syntax clear
