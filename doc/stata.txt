@@ -1,0 +1,166 @@
+*stata.txt* Vim plugin for editing Stata source files
+
+  ___  ____  ____  ____  ____~
+ /__    /   ____/   /   ____/~
+___/   /   /___/   /   /___/ ~
+
+
+Syntax and mappings for Stata source files.
+
+=============================================================================
+CONTENTS                                                      *StataContents*
+
+1. Usage				|StataUsage|
+2. Mappings				|StataMappings|
+   2.1 Comment				   |StataComment|
+   2.2 Date				   |StataDate|
+   2.3 Version				   |StataVersion|
+   2.4 Mata debug			   |StataMataDebug|
+   2.5 Stata debug			   |StataStataDebug|
+   2.6 xx				   |Stataxx|
+3. License				|StataLicense|
+4. Bugs					|StataBugs|
+5. Changelog				|StataChangelog|
+
+=============================================================================
+1. Usage                                                         *StataUsage*
+
+This plugin will automatically provide syntax highlighting for Stata and Mata
+source files (files ending in .ado, .do, and .mata).
+
+=============================================================================
+2. Mappings                                                   *StataMappings*
+
+I've developed the following mappings to help me find bugs in my Stata code.
+
+-----------------------------------------------------------------------------
+2.1 Comment                                                       *StataDate*
+
+Bound to: <localleader>c
+          <localleader>C
+
+<localleader>c inserts a comment at the start of the line.  I use this to
+temporarily remove a line of code from being executed.
+
+<localleader>C removes the same number of leading characters inserted by
+<localleader>c.  It's like an undo for <localleader>c.
+
+-----------------------------------------------------------------------------
+2.2 Date                                                          *StataDate*
+
+Bound to: <localleader>date
+
+Get the current date in a format commonly used in version comments at the top
+of the Stata and Mata source files.
+
+-----------------------------------------------------------------------------
+2.3 Version                                                    *StataVersion*
+
+Bound to: <localleader>vv
+          <localleader>uu
+
+<localleader>vv searches for the version comment, increments the version
+counter, and changes the date to the current date.
+
+<localleader>uu searches for the version comment and changes the date to the
+current date.  The version counter remains unchanged.
+
+-----------------------------------------------------------------------------
+2.4 Mata debug                                               *StataMataDebug*
+
+Bound to: <localleader>m0
+          <localleader>mx
+          <localleader>mg
+          <localleader>mf
+          <localleader>ms
+          <localleader>mee
+
+<localleader>m0 adds a simple Mata debug message.
+
+<localleader>mx adds a Mata debug message for showing a Mata object.
+
+<localleader>mg adds a Mata debug message for showing a real scalar value.
+
+<localleader>mf adds a Mata debug message for showing an integer scalar value.
+
+<localleader>ms adds a Mata debug message for showing a string scalar value.
+
+<localleader>mee adds a call to Mata's exit function with code 9999.
+
+-----------------------------------------------------------------------------
+2.5 Sata debug                                               *StataSataDebug*
+
+Bound to: <localleader>s0
+          <localleader>sG
+          <localleader>sg
+          <localleader>sL
+          <localleader>sl
+          <localleader>see
+
+<localleader>s0 adds a simple Sata debug message.
+
+<localleader>sG adds a Sata debug message for showing the contents of a Stata
+scalar whose name is held in a global macro.
+
+<localleader>sg adds a Sata debug message for showing the contents global
+macro.
+
+<localleader>sL adds a Sata debug message for showing the contents of a Stata
+scalar whose name is held in a local macro.
+
+<localleader>sl adds a Sata debug message for showing the contents local
+macro.
+
+<localleader>see adds a call to Stata's exit command with code 9999.
+
+-----------------------------------------------------------------------------
+2.6 xx                                                              *Stataxx*
+
+Bound to: <localleader>xx
+
+Shortcut for switching all instances of xx in the current line to something
+else.
+
+=============================================================================
+3. License                                                     *StataLicense*
+
+Same as Vim (see |license|).
+
+=============================================================================
+4. Bugs                                                           *StataBugs*
+
+If you find a bug, please let me know by posting it on the issue tracker:
+http://github.com/jpitblado/vim-stata/issues/
+
+=============================================================================
+5. Changelog                                                 *StataChangelog*
+
+1.1.5
+	* Added syntax support for the triple slash comment.
+	* Added mappings.
+	* Added documentation.
+
+1.1.4
+	* I can't remember.
+
+1.1.3
+	* I can't remember.
+
+1.1.2
+	* Fixed start expression for stataFunc matches.
+
+1.1.1
+	* Renamed syntax groups st to stata.
+	* 'syntax clear' only under version control.
+	* Check for 'b:current_syntax', removed 'did_stata_syntax_inits'.
+
+1.1.0
+	* Updated for Stata 9.
+	* Improved function coverage.
+	* Trimmed most Stata commands out, leaving only common programming
+	  commands.
+
+1.0.5
+	* Initial stable release on vim.org.
+
+=============================================================================
