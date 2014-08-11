@@ -18,7 +18,6 @@ nnoremap <buffer> <localleader>date :r !date '+\%d\%b\%Y'<cr>02lgul0k
 " update the version comment at the top of the file
 nmap <buffer> <localleader>uu gg/\<version\>\\|\<VERSION\>/<cr>6wcw<esc><localleader>dateJ:nohlsearch<cr>
 nmap <buffer> <localleader>vv <localleader>uu?\.?<cr><c-a>:nohlsearch<cr>
-nmap <buffer> <localleader>hh gg/\<version\>\\|\<VERSION\>/<cr>6wcw<cr><esc>k<localleader>dateJJx?\.?<cr><c-a>:nohlsearch<cr>
 
 " Mata debug message
 nnoremap <buffer> <localleader>m0 Oerrprintf("!!rm: 0\n")<esc>
