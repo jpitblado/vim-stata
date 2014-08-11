@@ -1,9 +1,9 @@
 # stata.vim
 
-Syntax file for editing Stata ado, do, and Mata source files.
+Syntax file for editing Stata and Mata source files.
 
-Some mappings I find specifically useful while editing ado, do, and Mata
-source files.
+Some mappings I find specifically useful while editing Stata and Mata source
+files.
 
 ## Installation
 
