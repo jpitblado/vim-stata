@@ -23,6 +23,7 @@ Right now the list of recognized Stata functions came from Stata 9.
 
 ## License
 
-Copyright (c) Jeff Pitblado.
+Copyright (c) Jeff Pitblado
+
 Distributed under the same terms as Vim itself.  See `:help license`.
 
