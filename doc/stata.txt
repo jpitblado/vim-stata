@@ -34,7 +34,7 @@ source files (files ending in .ado, .class, .do, and .mata).
 I've developed the following mappings to help me find bugs in my Stata code.
 
 -----------------------------------------------------------------------------
-2.1 Comment                                                       *StataDate*
+2.1 Comment                                                    *StataComment*
 
 Bound to: <localleader>c
           <localleader>C
