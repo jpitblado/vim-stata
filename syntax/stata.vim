@@ -178,7 +178,7 @@ syn region stataEString matchgroup=Nothing start=/`"/ end=/"'/ oneline contains=
 syn region stataString  matchgroup=Nothing start=/"/ end=/"/   oneline contains=@stataMacroGroup
 
 " define clusters
-syn cluster stataFuncGroup  contains=@stataMacroGroup,stataFunc,stataString,stataEstring,stataParen,stataBracket,stataStarComment,stataSlashComment
+syn cluster stataFuncGroup  contains=@stataMacroGroup,stataFunc,stataString,stataEstring,stataParen,stataBracket,stataStarComment,stataSlashComment,stataComment
 syn cluster stataMacroGroup contains=stataGlobal,stataLocal
 syn cluster stataParenGroup contains=stataParenError,stataBracketError,stataBraceError,stataSpecial,stataFormat
 
