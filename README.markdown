@@ -19,7 +19,6 @@ git clone https://github.com/jpitblado/vim-stata.git stata
 ## Future plans
 
 Update the syntax file to conform with the current Stata release.
-Right now the list of recognized Stata functions came from Stata 9.
 
 ## License
 
