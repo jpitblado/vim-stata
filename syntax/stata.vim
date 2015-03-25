@@ -14,12 +14,13 @@ syntax case match
 
 " comments - single line
 " note that the triple slash continuing line comment comes free
-syn region stataStarComment  start=/^\s*\*/ end=/$/    contains=stataComment oneline
-syn region stataSlashComment start="\s//"   end=/$/    contains=stataComment oneline
-syn region stataSlashComment start="\s///"   end=/$/   contains=stataComment oneline
-syn region stataSlashComment start="^//"    end=/$/    contains=stataComment oneline
+syn region stataStarComment  start=/^\s*\*/ end=/$/ contains=stataComment oneline
+syn region stataSlashComment start="\s//"   end=/$/ contains=stataComment oneline
+syn region stataSlashComment start="\s///"  end=/$/ contains=stataComment oneline
+syn region stataSlashComment start="^//"    end=/$/ contains=stataComment oneline
+
 " comments - multiple line
-syn region stataComment      start="/\*"    end="\*/"  contains=stataComment
+syn region stataComment start="/\*" end="\*/" contains=stataComment
 
 " global macros - simple case
 syn match  stataGlobal /\$\a\w*/
@@ -177,7 +178,7 @@ syn region stataEString matchgroup=Nothing start=/`"/ end=/"'/ oneline contains=
 syn region stataString  matchgroup=Nothing start=/"/ end=/"/   oneline contains=@stataMacroGroup
 
 " define clusters
-syn cluster stataFuncGroup contains=@stataMacroGroup,stataFunc,stataString,stataEstring,stataParen,stataBracket,stataStarComment,stataSlashComment
+syn cluster stataFuncGroup  contains=@stataMacroGroup,stataFunc,stataString,stataEstring,stataParen,stataBracket,stataStarComment,stataSlashComment
 syn cluster stataMacroGroup contains=stataGlobal,stataLocal
 syn cluster stataParenGroup contains=stataParenError,stataBracketError,stataBraceError,stataSpecial,stataFormat
 
