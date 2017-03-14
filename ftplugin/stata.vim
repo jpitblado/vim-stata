@@ -1,11 +1,15 @@
 " ftplugin/stata.vim - maps for Stata source files
 " Maintainer:   Jeff Pitblado <jpitblado at stata.com>
-" Last Change:  20apr2016
+" Last Change:  14mar2017
 
 if exists("b:did_ftplugin")
 	finish
 endif
 let b:did_ftplugin = 1
+
+" help navigate from within do-files by their base names using
+" 'gf' and '<C-w><C-f>'
+set includeexpr=substitute(v:fname,'\$','.do','g')
 
 " I use '!!rm' in my debug output so it is easy to search for and remove later
 
