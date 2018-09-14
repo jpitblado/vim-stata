@@ -1,10 +1,5 @@
 " syntax stata15commands.vim
 
-" Copy this file to the following location if you want Vim to recognize
-" the full list of documented and 'undocumented' commands in Stata 15.
-"
-" 	$HOME/.vim/after/syntax/stata.vim
-
 " Stata 15 commands from -getcmd, hlponly-
 syn keyword stataGetCmd _assert_mreldif
 syn keyword stataGetCmd _b_pclass
