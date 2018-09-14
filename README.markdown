@@ -16,6 +16,16 @@ cd ~/.vim/bundle
 git clone https://github.com/jpitblado/vim-stata.git stata
 ```
 
+## Stata commands
+
+Copy or symbolically link the file `stata_commands.vim` to the following
+location if you want Vim to recognize the full list of documented and
+'undocumented' commands in Stata.
+
+```
+$HOME/.vim/after/syntax/stata.vim
+```
+
 ## Future plans
 
 Update the syntax file to conform with the current Stata release.
