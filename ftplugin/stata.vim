@@ -1,6 +1,6 @@
 " ftplugin/stata.vim - maps for Stata source files
 " Maintainer:   Jeff Pitblado <jpitblado at stata.com>
-" Last Change:  14mar2017
+" Last Change:  22dec2022
 
 if exists("b:did_ftplugin")
 	finish
@@ -22,6 +22,7 @@ nnoremap <buffer> <localleader>date :r !date '+\%d\%b\%Y'<cr>02lgul0k
 " update the version comment at the top of the file
 nmap <buffer> <localleader>uu gg/\<version\>\\|\<VERSION\>/<cr>6wcw<esc><localleader>dateJ:nohlsearch<cr>
 nmap <buffer> <localleader>vv <localleader>uu?\.?<cr><c-a>:nohlsearch<cr>
+nmap <buffer> <localleader>ww <localleader>uu?\.?<cr> cw0<esc>nn<c-a>:nohlsearch<cr>
 
 " Mata debug message
 nnoremap <buffer> <localleader>m0 O<esc>aerrprintf("!!rm: 0\n")<esc>

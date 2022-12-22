@@ -56,14 +56,18 @@ of the Stata and Mata source files.
 -----------------------------------------------------------------------------
 2.3 Version                                                    *StataVersion*
 
-Bound to: <localleader>vv
-          <localleader>uu
-
-<localleader>vv searches for the version comment, increments the version
-counter, and changes the date to the current date.
+Bound to: <localleader>uu
+          <localleader>vv
+          <localleader>ww
 
 <localleader>uu searches for the version comment and changes the date to the
 current date.  The version counter remains unchanged.
+
+<localleader>vv searches for the version comment, increments the minor version
+counter, and changes the date to the current date.
+
+<localleader>vv searches for the version comment, increments the middle version
+counter, and changes the date to the current date.
 
 -----------------------------------------------------------------------------
 2.4 Mata debug                                               *StataMataDebug*
